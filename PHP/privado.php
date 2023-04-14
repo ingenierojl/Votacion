@@ -1,0 +1,170 @@
+<?php
+// Activa las sesiones
+session_start();
+// Comprueba si existe la sesión 'email', en caso contrario vuelve a la página de login
+if (!isset($_SESSION['email'])) header('Location: login.php');
+?>
+<!DOCTYPE html>
+<html lang="es">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <title>Comité Directivo Candidatos</title>
+        <link rel="stylesheet" href="../CSS/estilos.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <script src="../JS/main.js"></script>    
+    </head>
+    <body>
+
+
+      
+       <header id="header">
+        <h1>candidatos comité directivo 2023</h1>
+        <div>
+            <img id="logo"src="https://www.iejoseacevedoygomez.edu.co/img/logo.png">
+            <img id="logo2"src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Mineducaci%C3%B3n_Colombia.svg/1280px-Mineducaci%C3%B3n_Colombia.svg.png">
+        </div>
+        </header>
+       
+<form action="../PHP/datos.php"  method="POST">
+     
+
+        <div class="candidates">
+
+
+          <div class="candidate-1" onclick="selectperc1()">
+            <h2 class="tituloc">Candidato #01</h2>
+            <p class="parrafoc">Juan Palacios</p>
+          <img  class="imagen" src="../IMG/fotojuan0.jpg"alt="img"><br>
+          </div>
+          
+        
+          
+
+          
+
+          <div class="candidate-2" onclick="selectperc2()">
+            <h2 class="tituloc">Candidato #02</h2>
+            <p class="parrafoc">Luz Amparo Rojas</p>
+            <img class="imagen2" src="../IMG/fotoluz.jpg"><br>
+             
+          </div>
+        
+
+          
+
+          <div class="candidate-3" onclick="selectperc3()">
+            <h2 class="tituloc">Candidato #03</h2>
+            <p class="parrafoc">Jeronimo Cano</p>
+            <img class="imagen3" src="../IMG/fotojero.jpg" alt=""><br>
+          </div>
+
+          
+
+          <div class="candidate-0" onclick="selectperc0()">
+            <h2 class="tituloc">Voto en blanco</h2>
+            <img class="imagen0" src="https://images.unsplash.com/photo-1601662528567-526cd06f6582?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG8lMjBibGFuY28lMjBsaXNvfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt=""><br>
+          </div>
+
+          
+
+        </div>
+        
+        
+     <label id="la1">
+            <input type="radio" name="OpcionConsejoDir" id="r01" value="01">
+            Opción 1
+          </label>
+          <label id="la2">
+            <input type="radio" name="OpcionConsejoDir" id="r02" value="02">
+            Opción 2
+          </label>
+          <label id="la3">
+            <input type="radio" name="OpcionConsejoDir" id="r03" value="03">
+            Opción 3
+          </label>
+          <label id="la4">
+            <input type="radio" name="OpcionConsejoDir" id="r00" value="00">
+            Opción 4
+          </label>
+    
+        
+        
+        
+        
+        
+        
+        
+      
+        <main>
+   
+          <div class="contenedor__todo">
+              <div class="caja__trasera">
+                  
+                  <div class="caja__trasera-register">
+                      <h3  id="th3">Vota con conciencia</h3>
+                      <p id="tp">Tu voto hace la diferencia</p>
+                      
+                  </div>
+                  
+              </div>
+
+              <!--Formulario de Login y registro-->
+              <div class="contenedor__login-register">
+                  <!--Login-->
+                  
+                  <div class="formulario__login"> 
+                      <h2 id="inicio">Iniciar Sesión</h2>
+                      <input type="text" placeholder="Nombre Completo" name="boxname">
+
+                      <div class="select">
+                        <select name="format" id="format">
+                           <option selected disabled>Tipo de documento</option>
+                           <option value="TI">Tarjeta de Identidad</option>
+                           <option value="CC">Cedula de Ciudadania</option>
+                           <option value="CI">Cedula extranjera</option>
+                           
+                        </select>
+                     </div>
+                      
+                      <input type="num" placeholder="Numero de documento" name="boxnumdocumento">
+                      
+                     
+
+          <!--<button type="submit" id="voto" onclick="window.alert('gracias por votar');">
+            Votar
+          </button>-->
+          </div>
+                  </form>
+                    
+              </div>
+          </div>
+
+      </main>
+          
+       
+     
+      </body>
+      
+     
+
+      <footer id="footer">
+        <div class="social">
+          <ul>
+            <li><a href="https://www.facebook.com/Iejoseacevedoygomez.edu/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0"  target="_blank" class="icon-facebook"></a></li>
+            <li><a href="https://twitter.com/joseacevedoygo1" target="_blank" class="icon-twitter"></a></li>
+            <li><a href="https://www.instagram.com/iejoseacevedoygomez/" target="_blank" class="icon-googleplus"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCxpoUg7b6jXRyJJI1M3fPaA?view_as=subscriber" target="_blank" class="icon-pinterest"></a></li>
+            <li><a href="https://www.iejoseacevedoygomez.edu.co/" class="icon-mail"></a></li>
+          </ul>
+        </div>
+    
+      <p>I.E Jose Acevedo Y Gomez             Sede Central: Calle 8 sur # 52C-20 Tels: (4)2552996-Sede Costa Rica: (604)4732953. Sede Colina (604)4731341 © 2023</p> 
+      
+      
+      <img id="logof"src="https://www.iejoseacevedoygomez.edu.co/img/logo.png">
+      </footer>
+</html>
